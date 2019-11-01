@@ -1,21 +1,20 @@
-package com.example.service;
+package com.example.service.discriminator;
 
 import com.example.entity.City;
 import com.example.repository.CityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
 import java.sql.SQLException;
 import java.util.List;
 
-@Service
+//@Service
 public class CityService {
 
-    @Autowired
+    //@Autowired
     private CityRepository cityRepository;
 
-    //@Autowired
-    //private TenantDataSource tenantDataSource;
+    //@PersistenceContext
+    public EntityManager entityManager;
 
     public void save(City city){
         cityRepository.save(city);
@@ -23,14 +22,6 @@ public class CityService {
 
     public List<City> getAll() throws SQLException {
         return cityRepository.findAll();
-        /*
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(tenantDataSource.getDataSource(TenantContext.getCurrentTenant()));
-        String sql = "SELECT * FROM city";
-        List<City> cities = jdbcTemplate.query(sql,
-                new BeanPropertyRowMapper(City.class));
-        return cities;
-        */
-
     }
 
     public City get(Long id){

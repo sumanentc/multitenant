@@ -2,16 +2,14 @@ package com.example.config.multitenant.database;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
-import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Component
+//@Component
 public class TenantDataSource implements Serializable {
 
     private HashMap<String, DataSource> dataSources = new HashMap<>();
@@ -30,7 +28,7 @@ public class TenantDataSource implements Serializable {
         return dataSource;
     }
 
-    @PostConstruct
+    //@PostConstruct
     public Map<String, DataSource> getAll() {
         List<DataSourceConfig> configList = configRepo.findAll();
         Map<String, DataSource> result = new HashMap<>();

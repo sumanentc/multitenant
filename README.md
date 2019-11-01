@@ -1,8 +1,8 @@
 # spring-boot-multitenant
 This is a Spring Boot multi-tenant sample using multiple datasources and Schema to persist data in different schemas. 
 That is using the [Hibernate multi-tenancy support](https://docs.jboss.org/hibernate/orm/4.2/devguide/en-US/html/ch16.html) working with the separate database strategy.
-By Default Multiple DataSource is enable. It works with JdbcTemplate also which is not natively supported by Spring Multi-Tenancy. When using Multi-tenancy in Spring Boot Table needs to be created externally. Auto table creation
-needs to be turned off. We will use Public Schema as the default schema. The DDL to create the table are present in DDL.sql in resources folder. 
+By Default Multiple Schema approach is enabled. It works with JdbcTemplate also which is not natively supported by Spring Multi-Tenancy. When using Multi-tenancy in Spring Boot Table needs to be created externally.
+Auto table creation needs to be turned off. We will use Public Schema as the default schema. The DDL to create the table are present in DDL.sql in resources folder. 
 ## Compile and package
 
 Being Maven centric, you can compile and package it without tests using:

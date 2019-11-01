@@ -3,12 +3,13 @@ package com.example.config.multitenant.schema;
 import org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-//@Component
+@Component
 public class TenantConnectionProvider implements MultiTenantConnectionProvider {
 
     private static Logger logger = LoggerFactory.getLogger(TenantConnectionProvider.class);
