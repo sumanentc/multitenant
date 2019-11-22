@@ -7,7 +7,7 @@ CREATE TABLE if not exists public.DATASOURCECONFIG (
 	password VARCHAR(255),
 	initialize BOOLEAN
 );
-
+##### Schema Creation ############
 create schema if not exists test1;
 create schema if not exists test2;
 create table test1.city(id bigint, name varchar(200));
