@@ -7,7 +7,10 @@ CREATE TABLE if not exists public.DATASOURCECONFIG (
 	password VARCHAR(255),
 	initialize BOOLEAN
 );
-##### Schema Creation ############
+INSERT INTO DATASOURCECONFIG VALUES (1, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/test?currentSchema=test1&ApplicationName=MultiTenant', 'test1', 'postgres', 'postgres', true);
+INSERT INTO DATASOURCECONFIG VALUES (2, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/test?currentSchema=test2&ApplicationName=MultiTenant', 'test2', 'postgres', 'postgres', true);
+
+##### DDL needs to be executed for Schema-Based MultiTenancy ############
 create schema if not exists test1;
 create schema if not exists test2;
 create table test1.city(id bigint, name varchar(200));
@@ -25,5 +28,3 @@ CREATE SEQUENCE "test2".hibernate_sequence
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-INSERT INTO DATASOURCECONFIG VALUES (1, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/test?currentSchema=test1&ApplicationName=MultiTenant', 'test1', 'postgres', 'postgres', true);
-INSERT INTO DATASOURCECONFIG VALUES (2, 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/test?currentSchema=test2&ApplicationName=MultiTenant', 'test2', 'postgres', 'postgres', true);

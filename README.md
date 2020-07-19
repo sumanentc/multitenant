@@ -10,6 +10,7 @@ We can implement multi-tenancy using any of the following approaches:</br>
 
 By Default Shared Database, Separate Schema approach is enabled. It works with JdbcTemplate also which is not natively supported by Spring Multi-Tenancy. When using Multi-tenancy in Spring Boot Table needs to be created externally.
 Auto table creation needs to be turned off. We will use Public Schema as the default schema. The DDL to create the table are present in DDL.sql in resources folder. 
+###Note: One Multi-Tenancy is enabled all the DDL needs to be executed manually
 ## Compile and package
 Being Maven centric, you can compile and package it without tests using:
 ```
@@ -34,4 +35,4 @@ Once started you can go and request the data using different tenants :
 
 *  `curl -X GET   http://localhost:8080/ -H 'Content-Type: application/json' -H 'X-TenantID: test1'`
 
-* `curl -X GET   http://localhost:8080/ -H 'Content-Type: application/json' -H 'X-TenantID: test2' `
+* `curl -X GET   http://localhost:8080/ -H 'Content-Type: application/json' -H 'X-TenantID: test2'`
