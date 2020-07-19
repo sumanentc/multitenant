@@ -9,8 +9,8 @@ We can implement multi-tenancy using any of the following approaches:</br>
 3. Shared Database, Separate Schema: All Tenants share a database, but have their own database schemas and tables.
 
 By Default Shared Database, Separate Schema approach is enabled. It works with JdbcTemplate also which is not natively supported by Spring Multi-Tenancy. When using Multi-tenancy in Spring Boot Table needs to be created externally.
-Auto table creation needs to be turned off. We will use Public Schema as the default schema. The DDL to create the table are present in DDL.sql in resources folder. 
-###Note: One Multi-Tenancy is enabled all the DDL needs to be executed manually
+Auto table creation needs to be turned off. We will use Public Schema as the default schema. The DDL to create the table are present in DDL.sql in resources folder.
+## Note: One Multi-Tenancy is enabled all the DDL needs to be executed manually
 ## Compile and package
 Being Maven centric, you can compile and package it without tests using:
 ```
