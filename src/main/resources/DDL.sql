@@ -1,3 +1,4 @@
+/*This DDL is tested against PostGres Database . It will vary for other Database*/
 CREATE TABLE if not exists public.DATASOURCECONFIG (
 	id bigint PRIMARY KEY,
 	driverclassname VARCHAR(255),
