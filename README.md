@@ -50,3 +50,8 @@ Once started you can go and request the data using different tenants :
 * `curl -X GET   http://localhost:8080/ -H 'Content-Type: application/json' -H 'X-TenantID: test1'`
 
 * `curl -X GET   http://localhost:8080/ -H 'Content-Type: application/json' -H 'X-TenantID: test2'`
+
+## More Information
+
+for more detailed technical information please check my
+post : https://medium.com/swlh/multi-tenancy-implementation-using-spring-boot-hibernate-6a8e3ecb251a
